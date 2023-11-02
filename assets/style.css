@@ -1,0 +1,189 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto", sans-serif;
+  background-color: black;
+}
+header {
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+}
+.header-box {
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  margin: 0.25rem;
+}
+aside {
+  z-index: 4;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+#aside-1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem 1rem 2rem;
+}
+
+.main {
+  padding: 0;
+  margin: 0;
+}
+.container {
+  position: relative;
+  display: grid;
+  width: 60vmin;
+  height: 60vmin;
+  /* grid-auto-columns: 50px;
+  grid-auto-rows: 50px; */
+  gap: 0px 0px;
+  grid-auto-flow: row dense;
+  grid-template-areas:
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . ."
+    ". . . . . . . . . . . . . . .";
+  padding: 0;
+  margin: 0;
+  background-color: white;
+}
+.block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  width: 4vmin;
+  height: 4vmin;
+}
+.block span {
+  width: 100%;
+  height: 100%;
+}
+#aside-2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem 4rem 2rem;
+}
+#avatar {
+  position: absolute;
+  width: 4vmin;
+  height: 4vmin;
+  top: calc(4vmin * 12);
+  left: calc(4vmin * 7);
+}
+.controls {
+  height: 6rem;
+  width: 6rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.arrow-keys {
+  color: grey;
+  background-color: rgb(53, 53, 53);
+  border-radius: 0.25rem;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.arrow-keys i {
+  font-size: 2rem;
+}
+.arrow-keys:nth-child(1),
+.arrow-keys:nth-child(4) {
+  margin: 0 2rem;
+}
+
+footer {
+  z-index: 5;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 3rem;
+  background-color: black;
+  color: white;
+}
+
+.grass {
+  background-image: url(./img/forest/grass1.jpg);
+  background-size: cover;
+}
+.mud {
+  background-image: url(./img/forest/mud1.png);
+  background-size: cover;
+}
+.leaves {
+  background-image: url(./img/forest/leaves1.png);
+  background-size: cover;
+}
+.tree {
+  background-image: url(./img/forest/tree1.png);
+  background-size: cover;
+}
+.rock {
+  background-image: url(./img/forest/rock1.png);
+  background-size: cover;
+}
+.pond {
+  background-image: url(./img/forest/pond1.png);
+  background-size: cover;
+}
+
+/* * Media queries */
+/* @media screen and (min-width:576px) {} */
+/* @media screen and (min-width:768px) {} */
+/* @media screen and (min-width:992px) {} */
+/* @media screen and (min-width:1200px) {} */
+/* @media screen and (min-width:1400px) {} */
