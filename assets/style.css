@@ -156,28 +156,29 @@ footer {
   color: white;
 }
 
+.block span {
+  background-color: green;
+}
+.empty {
+  background-size: cover;
+}
 .grass {
-  background-image: url(./img/forest/grass1.jpg);
   background-size: cover;
 }
 .mud {
-  background-image: url(./img/forest/mud1.png);
-  background-size: cover;
-}
-.leaves {
-  background-image: url(./img/forest/leaves1.png);
+  /* background-image: url(./img/terrains/mud.png); */
   background-size: cover;
 }
 .tree {
-  background-image: url(./img/forest/tree1.png);
+  background-image: url(./img/terrains/tree.png);
   background-size: cover;
 }
 .rock {
-  background-image: url(./img/forest/rock1.png);
+  background-image: url(./img/terrains/rock.png);
   background-size: cover;
 }
 .pond {
-  background-image: url(./img/forest/pond1.png);
+  background-image: url(./img/terrains/pond.png);
   background-size: cover;
 }
 

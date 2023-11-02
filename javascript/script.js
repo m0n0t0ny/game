@@ -5,8 +5,12 @@ function checkKey(e) {
 
   if (e.keyCode == 38) {
     // up arrow
-    spawnCells();
     console.log("up");
+    const nextCell = document.getElementById("next-cell");
+    console.log("nextCell:", nextCell);
+    if (nextCell && !nextCell.classList.contains("tree")) {
+      spawnCells();
+    }
   } else if (e.keyCode == 40) {
     // down arrow
     console.log("down");
@@ -31,24 +35,24 @@ arrowButtons.forEach((button) => {
 
 const biome = ["forest", "mountain", "coast", "desert"];
 const cellType = ["free", "wall"];
-const forestFreeCell = ["grass", "mud", "leaves"];
+const forestFreeCell = ["empty", "empty", "empty", "mud"];
 const forestWallCell = ["tree", "rock", "pond"];
 
-const row15InnerCells = document.querySelectorAll(".row15 span");
-const row14InnerCells = document.querySelectorAll(".row14 span");
-const row13InnerCells = document.querySelectorAll(".row13 span");
-const row12InnerCells = document.querySelectorAll(".row12 span");
-const row11InnerCells = document.querySelectorAll(".row11 span");
-const row10InnerCells = document.querySelectorAll(".row10 span");
-const row9InnerCells = document.querySelectorAll(".row9 span");
-const row8InnerCells = document.querySelectorAll(".row8 span");
-const row7InnerCells = document.querySelectorAll(".row7 span");
-const row6InnerCells = document.querySelectorAll(".row6 span");
-const row5InnerCells = document.querySelectorAll(".row5 span");
-const row4InnerCells = document.querySelectorAll(".row4 span");
-const row3InnerCells = document.querySelectorAll(".row3 span");
-const row2InnerCells = document.querySelectorAll(".row2 span");
-const row1InnerCells = document.querySelectorAll(".row1 span");
+const row15Span = document.querySelectorAll(".row15 span");
+const row14Span = document.querySelectorAll(".row14 span");
+const row13Span = document.querySelectorAll(".row13 span");
+const row12Span = document.querySelectorAll(".row12 span");
+const row11Span = document.querySelectorAll(".row11 span");
+const row10Span = document.querySelectorAll(".row10 span");
+const row9Span = document.querySelectorAll(".row9 span");
+const row8Span = document.querySelectorAll(".row8 span");
+const row7Span = document.querySelectorAll(".row7 span");
+const row6Span = document.querySelectorAll(".row6 span");
+const row5Span = document.querySelectorAll(".row5 span");
+const row4Span = document.querySelectorAll(".row4 span");
+const row3Span = document.querySelectorAll(".row3 span");
+const row2Span = document.querySelectorAll(".row2 span");
+const row1Span = document.querySelectorAll(".row1 span");
 
 let row15 = [];
 let row14 = [];
@@ -69,91 +73,91 @@ let newCells = [];
 function spawnCells() {
   row15 = [];
   for (let i = 0; i < 15; i++) {
-    const row15InnerCell = row15InnerCells[i];
+    const row15InnerCell = row15Span[i];
     row15.push(row14[i]);
     row15InnerCell.className = `${row15[i]}`;
   }
   row14 = [];
   for (let i = 0; i < 15; i++) {
-    const row14InnerCell = row14InnerCells[i];
+    const row14InnerCell = row14Span[i];
     row14.push(row13[i]);
     row14InnerCell.className = `${row14[i]}`;
   }
   row13 = [];
   for (let i = 0; i < 15; i++) {
-    const row13InnerCell = row13InnerCells[i];
+    const row13InnerCell = row13Span[i];
     row13.push(row12[i]);
     row13InnerCell.className = `${row13[i]}`;
   }
   row12 = [];
   for (let i = 0; i < 15; i++) {
-    const row12InnerCell = row12InnerCells[i];
+    const row12InnerCell = row12Span[i];
     row12.push(row11[i]);
     row12InnerCell.className = `${row12[i]}`;
   }
   row11 = [];
   for (let i = 0; i < 15; i++) {
-    const row11InnerCell = row11InnerCells[i];
+    const row11InnerCell = row11Span[i];
     row11.push(row10[i]);
     row11InnerCell.className = `${row11[i]}`;
   }
   row10 = [];
   for (let i = 0; i < 15; i++) {
-    const row10InnerCell = row10InnerCells[i];
+    const row10InnerCell = row10Span[i];
     row10.push(row9[i]);
     row10InnerCell.className = `${row10[i]}`;
   }
   row9 = [];
   for (let i = 0; i < 15; i++) {
-    const row9InnerCell = row9InnerCells[i];
+    const row9InnerCell = row9Span[i];
     row9.push(row8[i]);
     row9InnerCell.className = `${row9[i]}`;
   }
   row8 = [];
   for (let i = 0; i < 15; i++) {
-    const row8InnerCell = row8InnerCells[i];
+    const row8InnerCell = row8Span[i];
     row8.push(row7[i]);
     row8InnerCell.className = `${row8[i]}`;
   }
   row7 = [];
   for (let i = 0; i < 15; i++) {
-    const row7InnerCell = row7InnerCells[i];
+    const row7InnerCell = row7Span[i];
     row7.push(row6[i]);
     row7InnerCell.className = `${row7[i]}`;
   }
   row6 = [];
   for (let i = 0; i < 15; i++) {
-    const row6InnerCell = row6InnerCells[i];
+    const row6InnerCell = row6Span[i];
     row6.push(row5[i]);
     row6InnerCell.className = `${row6[i]}`;
   }
   row5 = [];
   for (let i = 0; i < 15; i++) {
-    const row5InnerCell = row5InnerCells[i];
+    const row5InnerCell = row5Span[i];
     row5.push(row4[i]);
     row5InnerCell.className = `${row5[i]}`;
   }
   row4 = [];
   for (let i = 0; i < 15; i++) {
-    const row4InnerCell = row4InnerCells[i];
+    const row4InnerCell = row4Span[i];
     row4.push(row3[i]);
     row4InnerCell.className = `${row4[i]}`;
   }
   row3 = [];
   for (let i = 0; i < 15; i++) {
-    const row3InnerCell = row3InnerCells[i];
+    const row3InnerCell = row3Span[i];
     row3.push(row2[i]);
     row3InnerCell.className = `${row3[i]}`;
   }
   row2 = [];
   for (let i = 0; i < 15; i++) {
-    const row2InnerCell = row2InnerCells[i];
+    const row2InnerCell = row2Span[i];
     row2.push(newCells[i]);
     row2InnerCell.className = `${row2[i]}`;
   }
   newCells = [];
 
-  row1InnerCells.forEach((Row1Column) => {
+  row1Span.forEach((Row1Column) => {
     const randomNum4CellFill = Math.floor(Math.random() * 101);
     // for each column of the row (15), generate random num from 1 to 100
     console.log("randomNum4CellFill:", randomNum4CellFill);
@@ -183,7 +187,7 @@ function spawnCells() {
       {
         const selectedCell = forestWallCell[randomNum4WallCellFill];
         // assign cell type to selectedCell
-        Row1Column.className = `${selectedCell}`;
+        Row1Column.className = `${selectedCell} blocking`;
         // assign cell type as a class name to row1Column[n]
         newCells.push(selectedCell);
         // push cell type to newCells array
